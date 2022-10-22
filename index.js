@@ -31,10 +31,12 @@ function addPosts(element) {
   }});
 }
 
+
 function createUsers() {
    fetch('https://jsonplaceholder.typicode.com/users')
   .then((response) => response.json())
   .then((data) => {
+   
    
    var usersTable = document.createElement('table')
    var usersTableBody = document.createElement('tbody')
@@ -62,6 +64,9 @@ function createUsers() {
    usersTable.appendChild(usersTableBody)
    usersTable.setAttribute("border", "2");
    var myDiv = document.getElementById("wrapper")
+   var users = document.createElement('h2');
+   users.innerHTML = "USERS:"
+   myDiv.appendChild(users);
    myDiv.appendChild(usersTable)
    document.querySelector('body').setAttribute('style', 'font-family: arial;')
    var posts = document.createElement('h2');
@@ -70,6 +75,7 @@ function createUsers() {
    });
 }
 
+ 
 createUsers();
 
 
