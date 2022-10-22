@@ -63,6 +63,7 @@ function createUsers() {
 
    usersTable.appendChild(usersTableBody)
    usersTable.setAttribute("border", "2");
+   usersTable.setAttribute("width", "100%")
    var myDiv = document.getElementById("wrapper")
    var users = document.createElement('h2');
    users.innerHTML = "USERS:"
